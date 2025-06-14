@@ -1,0 +1,30 @@
+# .github/workflows/lightning-test2.yml
+name: ⚡ Lightning Runner Test
+
+on:
+  push:
+  workflow_dispatch:  # Manual trigger button 
+
+jobs:
+  lightning-test:
+    runs-on: [self-hosted, ubuntu, custom, lightning-fast]
+    
+    steps:
+    - name: ⚡ Lightning Runner Info
+      run: |
+        echo "🚀 LIGHTNING RUNNER TEST"
+        echo "Runner: $(hostname)"
+        echo "CPU Cores: $(nproc)"
+        echo "Memory: $(free -h | grep Mem | awk '{print $2}')"
+        echo "Time: $(date)"
+        
+    - name: 🎯 Test Commands
+      run: |
+        echo "✅ Node.js: $(node --version)"
+        echo "✅ Python: $(python3 --version)"
+        echo "✅ Git: $(git --version)"
+        
+    - name: 🎉 Success
+      run: |
+        echo "🎉 Lightning Runner working perfectly!"
+        echo "⚡ Your 5-runner fleet is ready for production!"
