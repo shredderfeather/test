@@ -7,7 +7,7 @@ on:
 
 jobs:
   lightning-test:
-    runs-on: [self-hosted, ubuntu, custom, lightning-fast]
+    runs-on: [ self-hosted, lightning-fast ]
     
     steps:
     - name: ⚡ Lightning Runner Info
