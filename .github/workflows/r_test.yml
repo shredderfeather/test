@@ -1,7 +1,7 @@
 # .github/workflows/lightning-test2.yml 
 name: ⚡ Lightning Runner Test
 
-on:
+on: 
   push:
   workflow_dispatch:  # Manual trigger button 
 
